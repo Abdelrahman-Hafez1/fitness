@@ -1,0 +1,85 @@
+.f-R{
+    position: relative;
+    margin: 20px auto;
+    width: 90%;
+    
+}
+
+
+.forma label{
+    position: absolute;
+    color: #074575;
+    font-weight: bold;
+    font-size: 14px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    
+}
+
+.forma div:last-of-type label{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+
+}
+.forma input{
+    width: 100%;
+    height: 100%;
+    padding: 10px 20px;
+    padding-top: 30px;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    
+}
+
+.forma label .label-name{
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    transition: transform 0.5s ease-in-out;
+}
+.forma div:last-of-type label .label-name{
+    left: 5%;
+    top: 20%;
+}
+.forma input:focus + label .label-name,.forma textarea:focus + label .label-name,.forma input:valid+label .label-name,.forma textarea:valid + label .label-name{
+    transform: translateY(-100%);
+}
+
+.forma input:focus,.forma textarea:focus{
+    border-bottom: 2px solid #0b8ef3;
+}
+.forma textarea{
+    width: 100%;
+    height: 140px;
+    outline: none;
+    padding: 10px 20px;
+    padding-top: 30px;
+    border: none;
+    border-bottom: 2px solid #ddd;
+}
+
+.forma button{
+    background-color: #0b8ef3;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    width: 80%;
+    margin: 20px 10% 20px 10%;
+    border: none;
+    outline: none;
+    padding: 10px 20px ;
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out;
+    
+}
+
+.forma button:hover{
+    transform: scale(1.2);
+}

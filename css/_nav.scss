@@ -1,0 +1,97 @@
+.scroll-nav{
+    position: absolute;
+    background-color: #fff;
+    transition: top 0.2s;
+}
+
+nav{
+    z-index: 10000;
+    padding: 20px 0;
+    width: 100%;
+    overflow: hidden ;
+    position: absolute;
+    @media(max-width: 991.98px){
+        background-color: $mainColor2;
+    }
+    background-color: #0000;
+    
+    .logo a{
+        display: block;
+        img{
+            max-height: 53px;
+        }
+    }
+    .nav-links{
+        @media(max-width: 991.98px){
+            display: none;
+        }
+        ul{
+            margin: 0;
+            li{
+                padding: 0 15px;
+                
+                a{
+                    @include aStyle();
+                    color: $mainColor2;
+                    @media(max-width: 991.98px){
+                        color: #000;
+                    }
+                    transition: color 0.3s,letter-spacing 0.3s;
+                    &:hover{
+                        color: $mainColor1;
+                        letter-spacing: 1.2px;
+                    }
+                }
+                .nav-links-a-color{
+                    color: #000;
+                    &:hover{
+                        color: $mainColor1;
+                        letter-spacing: 1.2px;
+                    }
+                }
+            }
+        }
+        .search-icon{
+            font-weight: bold;
+            font-size: 18px;
+            color: $mainColor1;
+            padding: 5px;
+        }
+        .search-input{
+            position: absolute;
+            top: 150%;
+            right: 10%;
+            display: none;
+            input{
+                outline: 0;
+                border: none;
+                box-shadow: 0px 0px 30px #a00;
+                padding: 3px 8px;
+                background-color: #eee;
+            }
+        }
+    }
+    .burger-button{
+        cursor: pointer;
+        padding: 5px 10px;
+    }
+    .burger-slide{
+        display: block;
+        width:30px ;
+        height: 3px;
+        position: relative;
+        background-color: #000;
+        &::after{
+            content: "";
+            @extend .burger-slide;
+            position: absolute;
+            top: 8px;
+        }
+        &::before{
+            content: "";
+            @extend .burger-slide;
+            position: absolute;
+            top: -8px;
+        }
+    }
+}
